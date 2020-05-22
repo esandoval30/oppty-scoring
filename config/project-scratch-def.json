@@ -1,0 +1,25 @@
+{
+  "orgName": "Great Opportunity Inc",
+  "edition": "Developer",
+  "description": "Opportunity Scoring with Einstein Prediction Builder",
+  "features": ["EinsteinAnalyticsPlus","EinsteinBuilder","AnalyticsAdminPerms"],
+  "settings": {
+    "lightningExperienceSettings": {
+      "enableS1DesktopEnabled": true
+    },
+    "mobileSettings": {
+      "enableS1EncryptedStoragePref2": false
+    },
+    "securitySettings": {
+      "passwordPolicies": {
+        "enableSetPasswordInApi": true
+      }
+    },
+    "analyticsSettings": {
+      "enableInsights": true,
+      "enableWaveRecordNavigation":true,
+      "enableWaveReplication":true,
+      "enableWaveTemplate":true
+    }
+  }
+}
