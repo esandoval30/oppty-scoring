@@ -4,7 +4,7 @@ sfdx force:source:push -f
 #create user
 sfdx force:user:password:generate
 #Create 'ALL AEs' Account to be the parent of all AE Contact Records
-sfdx force:data:record:create -s Account -v "Name=ALLAEs External_ID__c=1"
+sfdx force:data:record:create -s Account -v "Name='ALL AEs' External_ID__c=1"
 #Bulk Load ALL AEs into Contact Object
 sfdx force:data:bulk:upsert -s Contact -f data/AEs-1.csv -i External_ID__c
 #Bulk Load ALL Client (Accounts) linked to their corresponding AE
