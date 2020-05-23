@@ -1,6 +1,6 @@
 sfdx force:org:create -f config/project-scratch-def.json -d 7 -s -w 3
 #push source code into scratch org
-sfdx force:source:push
+sfdx force:source:push -f
 #create user
 sfdx force:user:password:generate
 #Create 'ALL AEs' Account to be the parent of all AE Contact Records
