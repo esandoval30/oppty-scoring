@@ -12,4 +12,4 @@ sfdx force:data:bulk:upsert -s Account -f data/Account.csv -i External_ID__c
 #Bulk Load ALL Opportunities
 sfdx force:data:bulk:upsert -s Opportunity -f data/AllOpportunities.csv -i External_ID__c
 #open the scratch org -- 
-sfdx force:org:open -p /setup/SetupOneHome/home
+sfdx force:org:open -p /lightning/setup/SetupOneHome/home
