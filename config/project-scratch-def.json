@@ -2,7 +2,7 @@
   "orgName": "Great Opportunity Inc",
   "edition": "Developer",
   "description": "Opportunity Scoring with Einstein Prediction Builder",
-  "features": ["EinsteinAnalyticsPlus","EinsteinBuilder","AnalyticsAdminPerms"],
+  "features": ["EinsteinAnalyticsPlus","EinsteinBuilder","AnalyticsAdminPerms","SalesCloudEinstein"],
   "settings": {
     "lightningExperienceSettings": {
       "enableS1DesktopEnabled": true
