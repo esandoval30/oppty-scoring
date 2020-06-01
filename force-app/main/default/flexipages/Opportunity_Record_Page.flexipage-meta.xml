@@ -119,9 +119,7 @@
         <type>Region</type>
     </flexiPageRegions>
     <flexiPageRegions>
-        <componentInstances>
-            <componentName>cooper:companyInsightTeaserCard</componentName>
-        </componentInstances>
+       
         <componentInstances>
             <componentInstanceProperties>
                 <name>relatedListComponentOverride</name>
