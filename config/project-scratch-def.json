@@ -1,6 +1,6 @@
 {
   "orgName": "Great Opportunity Inc",
-  "edition": "Developer",
+  "edition": "Enterprise",
   "description": "Opportunity Scoring with Einstein Prediction Builder",
   "features": ["EinsteinAnalyticsPlus","EinsteinBuilder","AnalyticsAdminPerms","SalesCloudEinstein"],
   "settings": {
