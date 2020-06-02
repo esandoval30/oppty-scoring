@@ -11,6 +11,7 @@
       "enableS1EncryptedStoragePref2": false
     },
     "securitySettings": {
+      "enableAuditFieldsInactiveOwner":true,
       "passwordPolicies": {
         "enableSetPasswordInApi": true
       }
@@ -21,5 +22,6 @@
       "enableWaveReplication":true,
       "enableWaveTemplate":true
     }
+    
   }
 }
