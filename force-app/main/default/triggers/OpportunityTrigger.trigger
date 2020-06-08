@@ -1,19 +1,12 @@
-trigger OpportunityTrigger on Opportunity (before insert) {
+trigger OpportunityTrigger on Opportunity (before insert, after insert) {
     
-    Datetime today = System.today();
+    OpportunityTriggerHandler h = new OpportunityTriggerHandler();
     
-    if (Trigger.isInsert) {
-        for(Opportunity o : Trigger.New) {
-            //set created date to a random number of days before CloseDate
-            Integer daysOpen = -1 * (2 + Integer.valueof((Math.random() * 100)));
-            Datetime newCreatedDate = o.CloseDate.addDays(daysOpen); 
-            if (newCreatedDate >= today) {
-                //bring back to a date prior to today
-                daysOpen = -1 * (1 + Integer.valueof((Math.random() * 50)));
-                o.CreatedDate = today.addDays(daysOpen);
-            } else {
-                o.CreatedDate  = newCreatedDate;
-            }           
-    	}
+    if (Trigger.isInsert && Trigger.isBefore) {
+        h.onBeforeInsert(Trigger.new); 
+    }
+    else if (Trigger.isInsert && Trigger.isAfter) {
+        	h.OnAfterInsert(Trigger.new);
+    	
     }
 }
