@@ -3,6 +3,8 @@ sfdx force:org:create -f config/project-scratch-def.json -d 7 -s -w 3
 sfdx force:source:push
 #create user
 sfdx force:user:password:generate
+#Grant SCE PermSet
+sfdx shane:user:permset:assign -n SalesCloudEinsteinAll
 #Create 'ALL AEs' Account to be the parent of all AE Contact Records
 sfdx force:data:record:create -s Account -v "Name='ALL AEs' External_ID__c=1"
 #Bulk Load ALL AEs into Contact Object
