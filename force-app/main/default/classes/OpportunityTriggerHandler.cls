@@ -32,7 +32,6 @@ public without sharing class OpportunityTriggerHandler {
         String won = 'Closed Won';
         String lost = 'Closed Lost';
         for (Opportunity o: opportunities) {
-            System.debug('setRandomDiscount-call = ' + o);
             if (won.equals(o.StageName) || lost.equals(o.StageName)) {
                 closedOppIds.add(o.Id);
             }
@@ -40,7 +39,7 @@ public without sharing class OpportunityTriggerHandler {
 
         Opportunity[] oppsToUpdate = [SELECT Id, Amount from Opportunity where id in :closedOppIds];
         for (Opportunity o  : oppsToUpdate ) {
-            Integer amountPctChange =  Integer.valueof(Math.random() * 5);
+            Integer amountPctChange = 1 +  Integer.valueof(Math.random() * 5);
             amountPctChange = Math.random() < 0.5 ? -1*amountPctChange : amountPctChange;
             o.Amount += o.Amount * amountPctChange / 100;
         }
